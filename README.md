@@ -3,6 +3,19 @@ Self-Driving Car Engineer Nanodegree Program
 
 ---
 
+## Parameters description
+PID is an abbreviation and here is its explaination:
+* P - denotes "proportiaonal*. This value directly depends on current CTE, so the higher is CTE, the higher is P proportianally;
+* I - denotes "integral". This value is a sum of all previous CTE's and is using to compensate streering bias.
+* D - denotes "differential". This value depends on difference between current and previous CTE. The value is used to lower the oscillations.
+
+Final PID parameter coefficients were found manually:
+Kp = 0.15
+Ki = 0.0
+Kd = 3.0
+
+Note the Ki value is 0 because there are no streering bias.
+
 ## Dependencies
 
 * cmake >= 3.5
